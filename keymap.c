@@ -205,9 +205,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                        KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-         CESC,    TABB,    TABF,    COPY,    PSTE,    CTLA,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RIGHT,  SPLTH,   SPLTV,
+         CESC,    TABB,    TABF,    COPY,    PSTE,    CTLA,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RIGHT,DE_CIRC,   SPLTV,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    VDWN,     VUP,    ALFT,    ARGT,     TMX,                     DE_SECT,    PLAY,     MUTE, DE_EURO, KC_HOME, XXXXXXX,
+      KC_LSFT,    VDWN,     VUP,    ALFT,    ARGT,     TMX,                     DE_SECT,    PLAY,     MUTE, DE_EURO, KC_HOME, KC_PSCR,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI,   MO(3), KC_LALT,       ALTE, _______, KC_BSPC
                                       //`--------------------------'  `--------------------------'
@@ -239,9 +239,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             //`--------------------------'  `--------------------------'
   ),
 
-  //hier kommt die gaming variante hin
-  // TODO copy this layer and remove KC_F1. Then I could move from the 0 layer to this with one hand.
-  // VIM layout
+  // ONEHAND layout
   [5] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______, KC_LALT,  KC_TAB, KC_LSFT,   KC_F5,   KC_F6,                        KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,
