@@ -216,7 +216,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //hier koennen maus und media keys hin... SOLLTEN SOGAR
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       QK_BOOT,  DF(4), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, KC_PGDN, KC_PGUP,
+       QK_BOOT,  DF(4), XXXXXXX, XXXXXXX, XXXXXXX,   DF(6),                      XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, KC_PGDN, KC_PGUP,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_ACL0, KC_ACL2,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -235,22 +235,66 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             KC_LSFT,    DE_Y,    DE_X,    DE_C,    DE_V,    DE_B,                         DE_N,    DE_M, DE_COMM,  DE_DOT,   DE_SS,  KC_ESC,
         //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                DE_J,   DE_K,  KC_SPC,     KC_ENT,   DF(0), KC_BSPC
+                                                DE_J,   DE_K,  KC_SPC,         KC_ENT,   DF(0), KC_BSPC
                                             //`--------------------------'  `--------------------------'
   ),
 
   // ONEHAND layout
   [5] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______, KC_LALT,  KC_TAB, KC_LSFT,   KC_F5,   KC_F6,                        KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,
+      _______, KC_LALT,  KC_TAB, KC_LSFT,   KC_F5,   KC_F6,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-         CESC,    TABB,    TABF,    COPY,    PSTE,    CTLA,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RIGHT,  SPLTH,   SPLTV,
+         CESC,    TABB,    TABF,    COPY,    PSTE,    CTLA,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, KC_HOME,    VDWN,     VUP,    ALFT,    ARGT,                          TMX, DE_PERC, DE_SECT,    PLAY,    MUTE, KC_PSCR,
+      KC_LSFT, KC_HOME,    VDWN,     VUP,    ALFT,    ARGT,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, XXXXXXX,  KC_SPC,     KC_ENT, XXXXXXX, KC_BSPC
                                       //`--------------------------'  `--------------------------'
   ),
+
+  // default blender
+  // CAREFULL T IS Z
+  [6] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+       KC_TAB,    DE_Q,    DE_W,    DE_E,    DE_R,    DE_Z,                         DE_Z,    DE_U,    DE_I,    DE_O,    DE_P, DE_UDIA,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+         CESC,    DE_A,    DE_S,    DE_D,    DE_F,    DE_G,                         DE_H,    DE_J,    DE_K,    DE_L, DE_ODIA, DE_ADIA,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      KC_LSFT,    DE_Y,    DE_X,    DE_C,    DE_V,    DE_B,                         DE_N,    DE_M, DE_COMM,  DE_DOT, DE_MINS,    SFTS,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          TT(8),   TT(7),      ALTE,       ALTE,     DF(0), KC_BSPC
+                                      //`--------------------------'  `--------------------------'
+
+  ),
+
+  // probably the most common F keys
+  // NUMBERS Blender
+  // need M, L(link)
+  [7] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+      DE_TILD,    DE_P,    KC_7,    KC_8,    KC_9,    DE_K,                         BCTK, DE_DQUO, DE_QUOT, DE_AMPR, DE_PIPE,  DE_DLR,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      KC_HOME,    DE_L,    KC_4,    KC_5,    KC_6,    DE_I,                        DE_AT, DE_LPRN, DE_RPRN, DE_LCBR, DE_RCBR, DE_BSLS,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+         KC_0,    DE_M,    KC_1,    KC_2,    KC_3,    DE_O,                      DE_HASH, DE_LBRC, DE_RBRC, DE_LABK, DE_RABK, DE_PERC,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                           DE_DOT,   TG(7), DE_COMM,       ALTE, XXXXXXX, KC_BSPC
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  // NUMPAD Blender
+  [8] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+      _______, KC_PSLS,   KC_P7,   KC_P8,   KC_P9, KC_PPLS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+         CESC, KC_PAST,   KC_P4,   KC_P5,   KC_P6, KC_PMNS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      KC_LSFT,   KC_P0,   KC_P1,   KC_P2,   KC_P3, KC_PDOT,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                            TG(8), KC_PENT,  KC_SPC,     KC_ENT, XXXXXXX, KC_BSPC
+                                      //`--------------------------'  `--------------------------'
+  ),
+
 
 
 };
