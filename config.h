@@ -25,6 +25,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define EE_HANDS
 #define TAPPING_TERM 100
 
+// This makes caps possible
+#define TAPPING_TERM_PER_KEY
+
 // this should immidiately switch when i press another key
 // #define HOLD_ON_OTHER_KEY_PRESS
 
