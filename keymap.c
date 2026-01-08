@@ -228,10 +228,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
          CESC,    TABB,    TABF,    COPY,    PSTE,    CTLA,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RIGHT, DE_DEG,   SPLTV,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    VDWN,     VUP,    ALFT,    ARGT,     TMX,                     DE_SECT,    PLAY,     MUTE, DE_EURO, KC_HOME, KC_PSCR,
+      KC_LSFT,    VDWN,     VUP,    ALFT,    ARGT,     TMX,                      DE_SECT, DE_EURO, KC_PGUP, KC_PGDN, KC_HOME, KC_PSCR,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI,   MO(3), KC_LALT,       ALTE, _______, KC_BSPC
                                       //`--------------------------'  `--------------------------'
+                                      //
   ),
 
   //hier koennen maus und media keys hin... SOLLTEN SOGAR
@@ -241,7 +242,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_ACL0, KC_ACL2,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,             XXXXXXX, KC_BTN1, KC_BTN2,KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP,KC_KB_MUTE,
+      RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,                     KC_BTN1, KC_BTN2,     PLAY,    MUTE,     VDWN,    VUP,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,       ALTE, _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
