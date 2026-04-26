@@ -289,14 +289,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ),
 
-  // probably the most common F keys
   // NUMBERS Blender
-  // need M, L(link)
   [7] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      DE_H,    DE_P,    KC_7,    KC_8,    KC_9,    DE_K,                         BCTK, DE_DQUO, DE_QUOT, DE_AMPR, DE_PIPE,  DE_DLR,
+      KC_LALT,    DE_P,    KC_7,    KC_8,    KC_9,    DE_K,                         BCTK, DE_DQUO, DE_QUOT, DE_AMPR, DE_PIPE,  DE_DLR,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      CESC,    DE_L,    KC_4,    KC_5,    KC_6,    DE_I,                        DE_AT, DE_LPRN, DE_RPRN, DE_LCBR, DE_RCBR, DE_BSLS,
+         CESC,    DE_L,    KC_4,    KC_5,    KC_6,    DE_I,                        DE_AT, DE_LPRN, DE_RPRN, DE_LCBR, DE_RCBR, DE_BSLS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
          KC_0,    DE_M,    KC_1,    KC_2,    KC_3,    DE_O,                      DE_HASH, DE_LBRC, DE_RBRC, DE_LABK, DE_RABK, DE_PERC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -307,7 +305,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // NUMPAD Blender
   [8] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KC_HOME, KC_PSLS,   KC_P7,   KC_N,   KC_F12, KC_PPLS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      KC_LALT, KC_PSLS,   KC_P7,   KC_N,   KC_F12, KC_PPLS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
          CESC, KC_PAST,   KC_F4,   KC_P5,   KC_H, KC_PMNS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
